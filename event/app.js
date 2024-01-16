@@ -10,3 +10,22 @@ const scream = () => {
 
 button.onmouseover = scream;
 
+const eventbtn = document.querySelector('#eventbtn');
+// eventbtn.addEventListener('click',function(){
+// 	alert('clicked');
+// });
+eventbtn.addEventListener('click',stepSatu);
+eventbtn.addEventListener('click',stepDua);
+
+
+function stepSatu(){
+	console.log('step satu');
+}
+
+function stepDua(){
+	console.log('step dua');
+}
+
+// eventbtn.onclick = stepSatu;
+// eventbtn.onclick = stepDua;
+
