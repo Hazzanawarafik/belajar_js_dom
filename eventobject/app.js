@@ -1,13 +1,24 @@
-document.querySelector('button').addEventListener('click', (e) => {
+document.querySelector('button').addEventListener('click',(e) => {
 	console.log(e);
 });
 
 const input = document.querySelector('input');
-input.addEventListener('keydown', (e) => {
-	switch (e.code) {
+// input.addEventListener('keydown',() => {
+// 	console.log('Tombol ditekan');
+// })
+// input.addEventListener('keyup',() => {
+// 	console.log('Tombol dilepas');
+// })
+input.addEventListener('keydown',(e) => {
+	console.log(e);
+	console.log(e.key);
+	console.log(e.code);
+});
+input.addEventListener('keydown',(e) => {
+	switch(e.code){
 		case 'ArrowUp':
 			console.log('Tombol Arah Atas');
-			break;
+		break;
 		case 'ArrowDown':
 			console.log('Tombol Arah Bawah');
 			break;
@@ -22,6 +33,3 @@ input.addEventListener('keydown', (e) => {
 	}
 });
 
-// input.addEventListener('keyup', () => {
-// 	console.log('Tombol dirilis');
-// });
