@@ -1,31 +1,15 @@
-const button = document.querySelector('#clickme');
+const form = document.querySelector('#form');
+const list = document.querySelector('#notes');
+const input = document.querySelector('input');
 
-button.onclick = function (){
-	console.log('You clicked me');
-}
+form.addEventListener('submit', function(e){
+	e.preventDefault();
+	const noteValue = input.value;
+	const newList = document.createElement('li');
+	newList.innerText = noteValue;
 
-const scream = () => {
-	console.log('Dont touch me');
-}
-
-button.onmouseover = scream;
-
-const eventbtn = document.querySelector('#eventbtn');
-// eventbtn.addEventListener('click',function(){
-// 	alert('clicked');
-// });
-eventbtn.addEventListener('click',stepSatu);
-eventbtn.addEventListener('click',stepDua);
-
-
-function stepSatu(){
-	console.log('step satu');
-}
-
-function stepDua(){
-	console.log('step dua');
-}
-
-// eventbtn.onclick = stepSatu;
-// eventbtn.onclick = stepDua;
+	// console.log(newList);
+	list.appendChild(newList);
+	input.value = '';
+});
 
